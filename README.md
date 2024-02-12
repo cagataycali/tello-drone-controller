@@ -3,6 +3,28 @@
 - This project provides a API interface to control a Tello drone using Express.js.
 - It allows users to send commands to the Tello drone through HTTP GET requests, making it easier to integrate drone control into web applications or services.
 
+# Install Globally
+
+```
+npx tello-drone-controller
+```
+
+or 
+
+```
+npm install -g tello-drone-controller
+```
+
+This will install the package globally and you can run the server from any directory.
+
+# Usage
+
+```
+tello-drone-controller # starts the server on port 9000
+```
+
+## Development
+
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:

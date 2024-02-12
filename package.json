@@ -1,14 +1,17 @@
 {
-  "name": "drone",
+  "name": "tello-drone-controller",
   "version": "1.0.0",
-  "description": "",
+  "description": "Tello drone controller API using Node.js and Express, with the tello-drone library.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "tello-drone-controller": "index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["tello", "drone", "controller", "api", "node", "express", "tiny drone", "dji", "tello-drone", "tello-drone-controller", "tello-drone-api", "tello-drone-node", "tello-drone-express"],
+  "author": "Cagatay Cali",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
     "tello-drone": "^3.0.6"
