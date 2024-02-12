@@ -7,6 +7,7 @@ const port = 9000;
 const drone = new Tello();
 
 let droneConnected = false;
+let STATE = {};
 
 // Drone event listeners
 drone.on("connection", () => {
@@ -16,6 +17,7 @@ drone.on("connection", () => {
 
 drone.on("state", state => {
   console.log("Received State >", state);
+  STATE = state;
 });
 
 drone.on("send", (err, length) => {
@@ -25,6 +27,10 @@ drone.on("send", (err, length) => {
 
 drone.on("message", message => {
   console.log("Received Message >", message);
+});
+
+app.get('/state', (req, res) => {
+  res.json(STATE);
 });
 
 // Define the route outside of the drone connection event
